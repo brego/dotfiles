@@ -61,8 +61,9 @@ alias c="tr -d '\n' | pbcopy"
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
+alias d="cd ~/Dropbox"
 alias p="cd ~/Projects"
+alias w="cd ~/Work"
 alias g="git"
 alias v="vim"
 alias m="mate ."
@@ -120,8 +121,8 @@ alias screenopen="screen -x"
 alias screencreate="screen -S"
 
 # Nginx
-alias nginxstart="sudo /usr/local/sbin/nginx"
-alias nginxstop="sudo /usr/local/sbin/nginx -s stop"
+alias startnginx="sudo /usr/local/sbin/nginx"
+alias stopnginx="sudo /usr/local/sbin/nginx -s stop"
 
 # Dock separator
-alias adddockseparator="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}' && killall Dock"
+alias dockseparatoradd="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}' && killall Dock"
