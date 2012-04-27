@@ -5,7 +5,7 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # ssh!
-alias shh='ssh -p 12187 brego@brego.dk'
+alias erathil='ssh -p 12187 brego@brego.dk'
 
 # List all files colorized in long format, including dot files
 alias la="ls -Gla"
@@ -118,3 +118,10 @@ alias ds="du -sh"
 # Work with screen
 alias screenopen="screen -x"
 alias screencreate="screen -S"
+
+# Nginx
+alias nginxstart="sudo /usr/local/sbin/nginx"
+alias nginxstop="sudo /usr/local/sbin/nginx -s stop"
+
+# Dock separator
+alias adddockseparator="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}' && killall Dock"
