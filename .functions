@@ -58,7 +58,7 @@ function unidecode() {
 	echo # newline
 }
 
-# Change the www dir
+# Change the www dir of nginx
 function wwwdir() {
 	NORMALIZED_PATH=$@;
 	NORMALIZED_PATH=`php -r "echo realpath('$NORMALIZED_PATH');"`;
