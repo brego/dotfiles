@@ -34,11 +34,11 @@ function httpcompression() {
 function json() {
 	if [ -p /dev/stdin ]; then
 		# piping, e.g. `echo '{"foo":42}' | json`
-		python -mjson.tool | pygmentize -l javascript
+		python -mjson.tool | pygmentize -l javascript;
 	else
 		# e.g. `json '{"foo":42}'`
-		python -mjson.tool <<< "$*" | pygmentize -l javascript
-	fi
+		python -mjson.tool <<< "$*" | pygmentize -l javascript;
+	fi;
 }
 
 # All the dig info
@@ -60,8 +60,21 @@ function unidecode() {
 
 # Change the www dir of nginx
 function wwwdir() {
-	NORMALIZED_PATH=$@;
-	NORMALIZED_PATH=`php -r "echo realpath('$NORMALIZED_PATH');"`;
+	normalized_path=$@;
+	normalized_path=`php -r "echo realpath('$normalized_path');"`;
 	rm -f /usr/local/html/www;
-	ln -s "$NORMALIZED_PATH" /usr/local/html/www;
+	ln -s "$normalized_path" /usr/local/html/www;
+	unset normalized_path;
+}
+
+function ip() {
+	if [ -n "$1" ]; then
+		ip=`dig +short @resolver1.opendns.com $1`;
+	else
+		ip=`dig +short myip.opendns.com @resolver1.opendns.com`;
+	fi;
+
+	echo -n $ip | pbcopy;
+	echo $ip;
+	unset ip;		
 }
