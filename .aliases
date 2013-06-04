@@ -9,6 +9,7 @@ alias su='su -'
 
 # ssh!
 alias erathil='ssh -p 12187 brego@brego.dk'
+alias jira='ssh root@172.17.99.14'
 
 # List all files colorized in long format, including dot files
 alias la="ls -Gla"
@@ -128,3 +129,5 @@ alias stopnginx="sudo /usr/local/sbin/nginx -s stop"
 
 # Dock separator
 alias dockseparatoradd="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}' && killall Dock"
+
+alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
