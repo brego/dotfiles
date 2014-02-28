@@ -131,3 +131,6 @@ alias stopnginx="sudo /usr/local/sbin/nginx -s stop"
 alias dockseparatoradd="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}' && killall Dock"
 
 alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
+
+# bregopass
+alias bregopass="./Applications/Scripts/bregopass.sh"
