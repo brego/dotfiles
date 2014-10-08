@@ -1,4 +1,4 @@
-# Brego's dotfiles - a fork of Paul's dotfiles...
+# Brego's dotfiles - a fork of Paul's dotfiles
 
 ## Installation
 
