@@ -137,7 +137,7 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 # Finder: disable window animations and Get Info animations
 defaults write com.apple.finder DisableAllAnimations -bool true
 
-# Finder: show hidden files by default
+# Finder: do not show hidden files by default
 defaults write com.apple.Finder AppleShowAllFiles -bool false
 
 # Finder: show all filename extensions
@@ -165,7 +165,7 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`, `Nlsv`
-defaults write com.apple.Finder FXPreferredViewStyle -string "clmv"
+defaults write com.apple.Finder FXPreferredViewStyle -string "Clmv"
 
 # Disable the warning before emptying the Trash
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
@@ -182,7 +182,12 @@ file=/Applications/Dropbox.app/Contents/Resources/check.icns
 unset file
 
 # Skip DMG verification
-defaults write com.apple.frameworks.diskimages skip-verify true
+defaults write com.apple.frameworks.diskimages skip-verify -bool true
+defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
+defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
+
+# Show icons for hard drives, servers, and removable media on the desktop
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 
 ###############################################################################
 # Dock & hot corners                                                          #
@@ -358,6 +363,11 @@ defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://
 # Transmission.app                                                            #
 ###############################################################################
 
+# Use `~/Downloads/Incomplete` to store incomplete downloads
+defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
+mkdir -p ~/Downloads/Incomplete
+defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/Incomplete"
+
 # Don’t prompt for confirmation before downloading
 defaults write org.m0k.transmission DownloadAsk -bool false
 
@@ -366,6 +376,9 @@ defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
 
 # Hide the legal disclaimer
 defaults write org.m0k.transmission WarningLegal -bool false
+
+#Hide the donate message
+defaults write org.m0k.transmission WarningDonate -bool false
 
 ###############################################################################
 # Twitter.app                                                                 #
