@@ -21,3 +21,10 @@ export LANG="en_US"
 # Add tab completion for `defaults read|write NSGlobalDomain`
 # You could just use `-g` instead, but I like being explicit
 complete -W "NSGlobalDomain" defaults
+
+# GIT completion (included in this package)
+source "$HOME/.git-completion.sh"
+
+
+# Local profile, system specific
+[[ -e "${HOME}/.local_profile" ]] && source "${HOME}/.local_profile"

@@ -1,53 +1,47 @@
+[user]
+	name = Kamil Dzieliński
+	email = brego.dk+d428c@gmail.com
+[core]
+	excludesfile   = ~/.gitignore
+	attributesfile = ~/.gitattributes
 [alias]
-	c = commit -am
+  a  = add
 	up = pull
-	p = push
-	s = status
+	s  = status -s
+	co = checkout
+	m  = merge
+	l  = log
+[pull]
+	ff     = only
+	rebase = true
+[rerere]
+	enabled = true
 [color]
 	ui = always
-[apply]
-	whitespace = input
-[core]
-	excludesfile = ~/.gitignore
-	attributesfile = ~/.gitattributes
-	whitespace = -fix,-space-before-tab,-tab-in-indent,-trailing-space
 [color "branch"]
 	current = yellow reverse
-	local = yellow
-	remote = green
+	local   = yellow
+	remote  = green
 [color "diff"]
 	meta = yellow bold
 	frag = magenta bold
-	old = red bold
-	new = green bold
+	old  = red bold
+	new  = green bold
 [color "status"]
-	added = yellow
-	changed = green
+	added     = yellow
+	changed   = green
 	untracked = cyan
 [merge]
 	log = true
 [url "git@github.com:"]
-	insteadOf = "gh:"
+	insteadOf     = "gh:"
 	pushInsteadOf = "github:"
 	pushInsteadOf = "git://github.com/"
 [url "git://github.com/"]
 	insteadOf = "github:"
 [url "git@gist.github.com:"]
-	insteadOf = "gst:"
+	insteadOf     = "gst:"
 	pushInsteadOf = "gist:"
 	pushInsteadOf = "git://gist.github.com/"
 [url "git://gist.github.com/"]
 	insteadOf = "gist:"
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-[filter "media"]
-	required = true
-	clean = git media clean %f
-	smudge = git media smudge %f
-[user]
-	name = Kamil Dzieliński
-	email = brego.dk+d428c@gmail.com
