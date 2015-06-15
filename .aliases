@@ -133,4 +133,4 @@ alias dockseparatoradd="defaults write com.apple.dock persistent-apps -array-add
 alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
 
 # bregopass
-alias bregopass="./Applications/Scripts/bregopass.sh"
+alias bregopass="${HOME}/.bregopass.sh"
