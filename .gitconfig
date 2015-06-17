@@ -9,8 +9,6 @@
 	ap  = add -p
 	b   = branch
 	c   = commit
-	ca  = commit -a
-	cam = commit -a -m
 	cm  = commit -m
 	co  = checkout
 	cb  = checkout -b
@@ -27,6 +25,8 @@
 [pull]
 	ff     = only
 	rebase = true
+[push]
+	default = simple
 [rerere]
 	enabled = true
 [color]
