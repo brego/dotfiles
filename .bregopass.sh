@@ -17,11 +17,15 @@ if [ "$pass_site" == "" ]; then
 fi
 
 pass="$pass_one:$pass_site:$pass_def";
-
 pass=`printf "${pass}" | openssl dgst -sha1 -binary | base64 | cut -c1-10`;
+
+email="$pass_one:$pass_site:$pass_def";
+email=`printf "${email}" | openssl dgst -sha1 -binary | base64 | rev | cut -c 2- | rev`;
+email=`printf "${email}" | openssl dgst -sha1 -hex | cut -c1-5`;
 
 pass="!\$${pass}1a";
 
 printf "${pass}" | pbcopy;
 
-echo "Password in clipboard."
+echo "Password in clipboard.";
+echo "Email is brego.dk+${email}@gmail.com";
