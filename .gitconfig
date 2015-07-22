@@ -5,23 +5,24 @@
 	excludesfile   = ~/.gitignore
 	attributesfile = ~/.gitattributes
 [alias]
-	a   = add
-	ap  = add -p
-	b   = branch
-	c   = commit
-	cm  = commit -m
-	co  = checkout
-	cb  = checkout -b
-	d   = diff
-	ds  = diff --staged
-	f   = fetch
-	h   = log --pretty=format:'%C(yellow)%h%Creset %cd | %s%C(yellow)%d%Creset %C(red)(%an, %cr)%Creset' --graph --date=short
-	l   = log
-	log = log --topo-order
-	m   = merge
-	r   = rebase
-	s   = status -s
-	up  = pull
+	a      = add
+	ap     = add -p
+	b      = branch
+	c      = commit
+	cm     = commit -m
+	co     = checkout
+	cb     = checkout -b
+	d      = diff
+	ds     = diff --staged
+	f      = fetch
+	h      = log --pretty=format:'%C(yellow)%h%Creset %cd | %s%C(yellow)%d%Creset %C(red)(%an, %cr)%Creset' --graph --date=short
+	l      = log --name-status
+	log    = log --topo-order
+	m      = merge
+	r      = rebase
+	s      = status -s
+	up     = pull
+	fuckit = reset --hard HEAD
 [pull]
 	ff     = only
 	rebase = true
