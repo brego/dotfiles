@@ -6,6 +6,7 @@
 	attributesfile = ~/.gitattributes
 [alias]
 	a      = add
+	aa     = add .
 	ap     = add -p
 	b      = branch
 	c      = commit
@@ -23,6 +24,8 @@
 	s      = status -s
 	up     = pull
 	fuckit = reset --hard HEAD
+[commit]
+	template = ~/.gitmessage
 [pull]
 	ff     = only
 	rebase = true
