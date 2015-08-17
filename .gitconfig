@@ -5,25 +5,27 @@
 	excludesfile   = ~/.gitignore
 	attributesfile = ~/.gitattributes
 [alias]
-	a      = add
-	aa     = add .
-	ap     = add -p
-	b      = branch
-	c      = commit
-	cm     = commit -m
-	co     = checkout
-	cb     = checkout -b
-	d      = diff
-	ds     = diff --staged
-	f      = fetch
-	h      = log --pretty=format:'%C(yellow)%h%Creset %cd | %s%C(yellow)%d%Creset %C(red)(%an, %cr)%Creset' --graph --date=short
-	l      = log --name-status
-	log    = log --topo-order
-	m      = merge
-	r      = rebase
-	s      = status -s
-	up     = pull
-	fuckit = reset --hard HEAD
+	a           = add
+	aa          = add .
+	ap          = add -p
+	b           = branch
+	c           = commit
+	cm          = commit -m
+	co          = checkout
+	cb          = checkout -b
+	d           = diff
+	ds          = diff --staged
+	f           = fetch
+	h           = log --pretty=format:'%C(yellow)%h%Creset %cd | %s%C(yellow)%d%Creset %C(red)(%an, %cr)%Creset' --graph --date=short
+	l           = log --name-status
+	log         = log --topo-order
+	m           = merge
+	r           = rebase
+	s           = status -s
+	up          = pull
+	fuckit      = reset --hard HEAD
+	unstage     = reset HEAD
+	undo-commit = reset --soft HEAD^
 [commit]
 	template = ~/.gitmessage
 [pull]
