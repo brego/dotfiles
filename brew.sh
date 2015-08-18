@@ -2,6 +2,12 @@
 
 # Install command-line tools using Homebrew
 
+# Make sure we have brew, if not, install
+hash brew &> /dev/null
+if [[ $? -ne 0 ]]; then
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi;
+
 # Make sure we’re using the latest Homebrew
 brew update
 
