@@ -1,5 +1,6 @@
 # Make vim the default editor
 export EDITOR="vim"
+
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
 
@@ -7,5 +8,10 @@ export MANPAGER="less -X"
 export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
-# Make some commands not show up in history
-export HISTIGNORE="ls:ls *:la:la *:cd:cd -:pwd;exit:date:* --help"
+
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# here's LS_COLORS
+# github.com/trapd00r/LS_COLORS
+command -v gdircolors >/dev/null 2>&1 || alias gdircolors="dircolors"
+eval "$(gdircolors -b ~/.dircolors)"
