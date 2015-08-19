@@ -22,9 +22,9 @@ hash gls >/dev/null 2>&1 || alias gls="ls"
 
 # Detect which `ls` flavor is in use
 if gls --color > /dev/null 2>&1; then # GNU `ls`
-	colorflag="--color"
+  colorflag="--color"
 else # OS X `ls`
-	colorflag="-G"
+  colorflag="-G"
 fi
 
 # ls options: F = put `/` after folders, h = byte unit suffixes, color! (even with piping to awk)
@@ -91,7 +91,7 @@ alias spoton="sudo mdutil -a -i on"
 
 # One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
-	alias "$method"="lwp-request -m '$method'"
+  alias "$method"="lwp-request -m '$method'"
 done
 
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
