@@ -16,7 +16,7 @@
 	d           = diff --color --color-words --abbrev
 	ds          = diff --color --color-words --abbrev --staged
 	f           = fetch
-	h           = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	h           = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	l           = log --name-status
 	log         = log --topo-order
 	m           = merge
