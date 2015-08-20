@@ -123,3 +123,5 @@ alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/
 
 # bregopass
 alias bregopass="${HOME}/.bregopass.sh"
+
+alias git-clean-local='git branch --no-color --merged | grep -v "\*" | grep -v "master|production|staging" | xargs -n 1 git branch -d';
