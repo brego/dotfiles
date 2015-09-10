@@ -66,5 +66,8 @@ brew install ffmpeg --with-libvpx
 
 brew install terminal-notifier
 
+# LOL
+brew install nyancat
+
 # Remove outdated versions from the cellar
 brew cleanup
