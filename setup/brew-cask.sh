@@ -24,6 +24,7 @@ brew cask install dropbox
 brew cask install gyazo
 brew cask install transmission
 brew cask install alfred
+brew cask install paparazzi
 
 # Development
 brew cask install atom
