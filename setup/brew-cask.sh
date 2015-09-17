@@ -25,6 +25,7 @@ brew cask install gyazo
 brew cask install transmission
 brew cask install alfred
 brew cask install paparazzi
+brew cask install caffeine
 
 # Development
 brew cask install atom
@@ -45,6 +46,7 @@ brew cask install opera
 
 # Media
 brew cask install vlc
+brew cask install spotify
 brew cask install beamer
 
 # Remove outdated versions from the cellar
