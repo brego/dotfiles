@@ -41,6 +41,7 @@ brew cask install acorn
 brew cask install chromium
 brew cask install google-chrome-canary
 brew cask install google-chrome
+brew cask install firefox
 brew cask install firefox-nightly
 brew cask install webkit-nightly
 brew cask install opera
