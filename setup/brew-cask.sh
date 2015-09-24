@@ -26,6 +26,7 @@ brew cask install transmission
 brew cask install alfred
 brew cask install paparazzi
 brew cask install caffeine
+brew cask install name-mangler
 
 # Development
 brew cask install atom
