@@ -21,3 +21,8 @@ complete -W "NSGlobalDomain" defaults
 
 # GIT completion (included in this package)
 source "$HOME/.git-completion.sh"
+
+# Brew completion
+if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
+  . $(brew --prefix)/share/bash-completion/bash_completion
+fi
