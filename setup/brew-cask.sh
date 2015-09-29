@@ -28,6 +28,7 @@ brew cask install paparazzi
 brew cask install caffeine
 brew cask install name-mangler
 brew cask install entropy
+brew cask install skype
 
 # Development
 brew cask install atom
