@@ -37,6 +37,8 @@ brew cask install imageoptim
 brew cask install transmit
 brew cask install dash
 brew cask install acorn
+brew cask install sequel-pro
+brew cask install psequel
 
 # Browsers
 brew cask install chromium
