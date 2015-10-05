@@ -126,5 +126,15 @@ alias bregopass="${HOME}/.bregopass.sh"
 
 alias git-clean-local='git branch --no-color --merged | grep -v "\*" | grep -v "master|production|staging" | xargs -n 1 git branch -d';
 
-# Restart the Bluetooth service 
+# Restart the Bluetooth service
 alias restartbluetooth='sudo kextunload -b com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport; kextload -b com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport'
+
+GRC=`which grc`
+if [ "$TERM" != dumb ] && [ -n "$GRC" ]
+  then
+  alias colourify="$GRC -es --colour=auto"
+  alias configure='colourify ./configure'
+  for app in {diff,make,gcc,g++,ping,traceroute,as,gas,ld}; do
+    alias "$app"='colourify '$app
+  done
+fi

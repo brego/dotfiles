@@ -3,10 +3,13 @@
 for file in ~/.{local_profile,bash_prompt,exports,aliases,functions}; do
   [ -r "$file" ] && source "$file"
 done
-unset file
+unset file;
 
 # Case-insensitive globbing (used in pathname expansion)
-shopt -s nocaseglob
+shopt -s nocaseglob;
+
+# Autocorrect typos in path names when using `cd`
+shopt -s cdspell;
 
 # Prefer US English and use UTF-8
 export LC_ALL="en_US.UTF-8"
