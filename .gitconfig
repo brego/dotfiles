@@ -27,6 +27,12 @@
 	unstage     = reset HEAD
 	undo-commit = reset --soft HEAD^
 	undo-push   = push -f origin HEAD^:master
+# Alias below is built by Kim Rose based on the following:
+# http://stackoverflow.com/a/4969679/954798
+#
+# It copies branch-1 contents to branch-2 without merging, whilie keeping the
+# branch-2 history.
+	mergetheirs = !git merge --no-edit -s ours "$1" && git branch branchTEMP && git reset --hard "$1" && git reset --soft branchTEMP && git commit --amend && git branch -D branchTEMP && git diff HEAD "$1"
 [commit]
 	template = ~/.gitmessage
 [pull]
