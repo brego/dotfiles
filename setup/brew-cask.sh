@@ -8,6 +8,9 @@ if [[ $? -ne 0 ]]; then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi;
 
+# This is important for setup
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
 # Make sure we’re using the latest Homebrew
 brew update
 
@@ -42,7 +45,7 @@ brew cask install transmit
 brew cask install dash
 brew cask install acorn
 brew cask install sequel-pro
-brew cask install psequel
+brew cask install postico
 
 # Browsers
 brew cask install chromium
