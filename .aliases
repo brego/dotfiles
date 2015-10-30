@@ -63,9 +63,9 @@ type -t md5sum > /dev/null || alias md5sum="md5"
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
 # Shortcuts
-alias d="cd ~/Dropbox"
-alias p="cd ~/Projects"
-alias w="cd ~/Work"
+alias d="cd ${HOME}/Dropbox"
+alias p="cd ${HOME}/Projects"
+alias w="cd ${HOME}/Work"
 
 # File size
 alias fs="stat -f \"%z bytes\""
@@ -74,7 +74,7 @@ alias fs="stat -f \"%z bytes\""
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
 
 # Empty the Trash on all mounted volumes and the main HDD
-alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ${HOME}/.Trash"
 
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
