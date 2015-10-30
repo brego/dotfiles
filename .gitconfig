@@ -32,7 +32,8 @@
 #
 # It copies branch-1 contents to branch-2 without merging, whilie keeping the
 # branch-2 history.
-	mergetheirs = !git merge --no-edit -s ours "$1" && git branch branchTEMP && git reset --hard "$1" && git reset --soft branchTEMP && git commit --amend && git branch -D branchTEMP && git diff HEAD "$1"
+	merge-theirs = !git merge --no-edit -s ours "$1" && git branch branchTEMP && git reset --hard "$1" && git reset --soft branchTEMP && git commit --amend && git branch -D branchTEMP && git diff HEAD "$1"
+	branch-cleanup = "!git branch --no-color --merged | grep -v '\\*' | grep -v 'master|production|staging|release' | xargs -n 1 git branch -d"
 [commit]
 	template = ~/.gitmessage
 [pull]
