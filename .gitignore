@@ -12,3 +12,6 @@ Thumbs.db
 
 # Codekit
 .codekit-cache
+
+# Node
+node_modules
