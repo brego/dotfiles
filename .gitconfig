@@ -1,74 +1,74 @@
 [user]
-	name  = Kamil Dzieliński
-	email = brego.dk+d428c@gmail.com
+    name  = Kamil Dzieliński
+    email = brego.dk+d428c@gmail.com
 [core]
-	excludesfile   = ~/.gitignore
-	attributesfile = ~/.gitattributes
+    excludesfile   = ~/.gitignore
+    attributesfile = ~/.gitattributes
 [alias]
-	a           = add
-	aa          = add .
-	ap          = add -p
-	b           = branch
-	c           = commit
-	cm          = commit -m
-	co          = checkout
-	cb          = checkout -b
-	d           = diff --color --color-words --abbrev
-	ds          = diff --color --color-words --abbrev --staged
-	f           = fetch
-	h           = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	l           = log --name-status
-	log         = log --topo-order
-	m           = merge
-	r           = rebase
-	s           = status -s
-	up          = pull
-	fuckit      = reset --hard HEAD
-	unstage     = reset HEAD
-	undo-commit = reset --soft HEAD^
-	undo-push   = push -f origin HEAD^:master
+    a           = add
+    aa          = add .
+    ap          = add -p
+    b           = branch
+    c           = commit
+    cm          = commit -m
+    co          = checkout
+    cb          = checkout -b
+    d           = diff --color --color-words --abbrev
+    ds          = diff --color --color-words --abbrev --staged
+    f           = fetch
+    h           = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    l           = log --name-status
+    log         = log --topo-order
+    m           = merge
+    r           = rebase
+    s           = status -s
+    up          = pull
+    fuckit      = reset --hard HEAD
+    unstage     = reset HEAD
+    undo-commit = reset --soft HEAD^
+    undo-push   = push -f origin HEAD^:master
 # Alias below is built by Kim Rose based on the following:
 # http://stackoverflow.com/a/4969679/954798
 #
 # It copies branch-1 contents to branch-2 without merging, whilie keeping the
 # branch-2 history.
-	merge-theirs = !git merge --no-edit -s ours "$1" && git branch branchTEMP && git reset --hard "$1" && git reset --soft branchTEMP && git commit --amend && git branch -D branchTEMP && git diff HEAD "$1"
-	branch-cleanup = "!git branch --no-color --merged | grep -v '\\*' | grep -v 'master|production|staging|release' | xargs -n 1 git branch -d"
+    merge-theirs = !git merge --no-edit -s ours "$1" && git branch branchTEMP && git reset --hard "$1" && git reset --soft branchTEMP && git commit --amend && git branch -D branchTEMP && git diff HEAD "$1"
+    branch-cleanup = "!git branch --no-color --merged | grep -v '\\*' | grep -v 'master|production|staging|release' | xargs -n 1 git branch -d"
 [commit]
-	template = ~/.gitmessage
+    template = ~/.gitmessage
 [pull]
-	ff     = only
-	rebase = true
+    ff     = only
+    rebase = true
 [push]
-	default = simple
+    default = simple
 [rerere]
-	enabled = true
+    enabled = true
 [color]
-	ui = always
+    ui = always
 [color "branch"]
-	current = yellow reverse
-	local   = yellow
-	remote  = green
+    current = yellow reverse
+    local   = yellow
+    remote  = green
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old  = red bold
-	new  = green bold
+    meta = yellow bold
+    frag = magenta bold
+    old  = red bold
+    new  = green bold
 [color "status"]
-	added     = yellow
-	changed   = green
-	untracked = cyan
+    added     = yellow
+    changed   = green
+    untracked = cyan
 [merge]
-	log = true
+    log = true
 [url "git@github.com:"]
-	insteadOf     = "gh:"
-	pushInsteadOf = "github:"
-	pushInsteadOf = "git://github.com/"
+    insteadOf     = "gh:"
+    pushInsteadOf = "github:"
+    pushInsteadOf = "git://github.com/"
 [url "git://github.com/"]
-	insteadOf = "github:"
+    insteadOf = "github:"
 [url "git@gist.github.com:"]
-	insteadOf     = "gst:"
-	pushInsteadOf = "gist:"
-	pushInsteadOf = "git://gist.github.com/"
+    insteadOf     = "gst:"
+    pushInsteadOf = "gist:"
+    pushInsteadOf = "git://gist.github.com/"
 [url "git://gist.github.com/"]
-	insteadOf = "gist:"
+    insteadOf = "gist:"

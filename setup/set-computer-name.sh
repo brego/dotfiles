@@ -13,10 +13,10 @@ echo;
 read -p "Are you absolutely sure you want to use name $new_name? [Y/n] " -n 1 -r confirm;
 echo;
 if [[ ! $confirm =~ ^[Y]$ ]];
-  then
-    exit 1;
-  else
-    echo "Okay, proceeding.";
+    then
+        exit 1;
+    else
+        echo "Okay, proceeding.";
 fi;
 
 

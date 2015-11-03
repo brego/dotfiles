@@ -14,10 +14,10 @@ echo;
 read -p "Are you absolutely sure you want to proceed? [Y/n] " -n 1 -r;
 echo;
 if [[ ! $REPLY =~ ^[Y]$ ]];
-  then
-    exit 1;
-  else
-    echo "Okay, proceeding.";
+    then
+        exit 1;
+    else
+        echo "Okay, proceeding.";
 fi;
 
 ###############################################################################
@@ -32,16 +32,16 @@ defaults write com.apple.universalaccess reduceTransparency -bool true
 
 # Menu bar: hide the Time Machine, Volume, and User icons
 for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
-	defaults write "${domain}" dontAutoLoad -array \
-		"/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
-		"/System/Library/CoreServices/Menu Extras/Volume.menu" \
-		"/System/Library/CoreServices/Menu Extras/User.menu"
+    defaults write "${domain}" dontAutoLoad -array \
+        "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
+        "/System/Library/CoreServices/Menu Extras/Volume.menu" \
+        "/System/Library/CoreServices/Menu Extras/User.menu"
 done
 defaults write com.apple.systemuiserver menuExtras -array \
-	"/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
-	"/System/Library/CoreServices/Menu Extras/AirPort.menu" \
-	"/System/Library/CoreServices/Menu Extras/Battery.menu" \
-	"/System/Library/CoreServices/Menu Extras/Clock.menu"
+    "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
+    "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
+    "/System/Library/CoreServices/Menu Extras/Battery.menu" \
+    "/System/Library/CoreServices/Menu Extras/Clock.menu"
 
 # Disable opening and closing window animations
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
@@ -248,9 +248,9 @@ defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 # Expand the following File Info panes:
 # “General”, “Open with”, and “Sharing & Permissions”
 defaults write com.apple.finder FXInfoPanesExpanded -dict \
-	General -bool true \
-	OpenWith -bool true \
-	Privileges -bool true
+    General -bool true \
+    OpenWith -bool true \
+    Privileges -bool true
 
 ###############################################################################
 # Dock & hot corners                                                          #
@@ -418,7 +418,7 @@ defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
 sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 
 ###############################################################################
-# Terminal & iTerm2                                                                   #
+# Terminal & iTerm2                                                           #
 ###############################################################################
 
 # Only use UTF-8 in Terminal.app
@@ -554,9 +554,10 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 ###############################################################################
 
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" \
-	"Dock" "Finder" "Google Chrome" "Google Chrome Canary" "Mail" "Messages" \
-	"Opera" "Safari" "Spectacle" "SystemUIServer" "Terminal" \
-	"Transmission" "iCal"; do
-	killall "$app" > /dev/null 2>&1
+    "Dock" "Finder" "Google Chrome" "Google Chrome Canary" "Mail" "Messages" \
+    "Opera" "Safari" "Spectacle" "SystemUIServer" "Terminal" \
+    "Transmission" "iCal"; do
+    killall "$app" > /dev/null 2>&1
 done
+
 echo "Done. Note that some of these changes require a logout/restart to take effect."
