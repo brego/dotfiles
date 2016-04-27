@@ -46,7 +46,7 @@ alias lsd='ls -l | grep "^d"'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en1"
+alias localip='echo -ne "Wire\t"; ipconfig getifaddr en0; echo -ne "Wi-Fi\t"; ipconfig getifaddr en5'
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
 # Flush Directory Service cache
