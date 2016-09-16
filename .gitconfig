@@ -34,6 +34,7 @@
 # branch-2 history.
     merge-theirs = !git merge --no-edit -s ours "$1" && git branch branchTEMP && git reset --hard "$1" && git reset --soft branchTEMP && git commit --amend && git branch -D branchTEMP && git diff HEAD "$1"
     branch-cleanup = "!git branch --no-color --merged | grep -v '\\*' | grep -v 'master|production|staging|release' | xargs -n 1 git branch -d"
+    branch-refresh = "remote update origin --prune"
 [commit]
     template = ~/.gitmessage
 [pull]
