@@ -398,9 +398,9 @@
 	<key>NSFontPanelAttributes</key>
 	<string>1, 5</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Documents</string>
+	<string>/Applications</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 448}</string>
+	<string>{712, 459}</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
 	<string>{712, 532}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -440,9 +440,9 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>842 442 620 392 0 0 2304 1273 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>288 196 796 473 0 0 1440 877 </string>
+	<string>433 183 918 498 0 0 2304 1273 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1 394 570 473 0 0 1440 877 </string>
+	<string>0 4 1440 873 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1152 4 1152 1269 0 0 2304 1273 </string>
 	<key>New Bookmarks</key>
@@ -604,19 +604,21 @@
 			<false/>
 			<key>Background Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.15170273184776306</real>
+				<real>0.11752618849277496</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.11783610284328461</real>
+				<real>0.097155317664146423</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>0.089676022529602051</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
-			<key>Background Image Location</key>
-			<string></string>
 			<key>Blend</key>
-			<real>0.30000001192092896</real>
+			<real>0.094756622497852064</real>
 			<key>Blink Allowed</key>
 			<false/>
 			<key>Blinking Cursor</key>
@@ -624,7 +626,7 @@
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>5.4195590019226074</real>
+			<real>7.6172753480764532</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -1015,6 +1017,8 @@
 			<true/>
 			<key>Normal Font</key>
 			<string>Monaco 12</string>
+			<key>Only The Default BG Color Uses Transparency</key>
+			<false/>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1166,7 +1170,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.090366125106811523</real>
+			<real>0.062553162828705003</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
@@ -1273,10 +1277,12 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-10-06T08:31:45Z</date>
+	<date>2016-11-08T13:40:29Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
+	<false/>
+	<key>ShowFullScreenTabBar</key>
 	<false/>
 	<key>ShowPaneTitles</key>
 	<true/>
@@ -1288,6 +1294,8 @@
 	<integer>4</integer>
 	<key>SwitchWindowModifier</key>
 	<integer>6</integer>
+	<key>TabStyle</key>
+	<integer>1</integer>
 	<key>TabViewType</key>
 	<integer>0</integer>
 	<key>ThreeFingerEmulates</key>
@@ -1320,6 +1328,10 @@
 	<false/>
 	<key>iTerm Version</key>
 	<string>3.0.10</string>
+	<key>kCPKSelectionViewPreferredModeKey</key>
+	<integer>7</integer>
+	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
+	<false/>
 	<key>moveToApplicationsFolderAlertSuppress</key>
 	<true/>
 </dict>
