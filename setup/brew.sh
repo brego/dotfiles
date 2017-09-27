@@ -65,8 +65,8 @@ brew install rename
 brew install tree
 brew install zopfli
 brew install ffmpeg --with-libvpx
-
 brew install terminal-notifier
+brew install jq
 
 # LOL
 brew install nyancat
