@@ -17,5 +17,11 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # here's LS_COLORS
 # github.com/trapd00r/LS_COLORS
-command -v gdircolors >/dev/null 2>&1 || alias gdircolors="dircolors"
-eval "$(gdircolors -b ${HOME}/.dircolors)"
+system_type=$(uname -s)
+if [ "$system_type" = "Darwin" ]; then
+	command -v gdircolors >/dev/null 2>&1 || alias gdircolors="dircolors"
+	eval "$(gdircolors -b ${HOME}/.dircolors)"
+else
+	eval "$(dircolors -b ${HOME}/.dircolors)"
+fi;
+
