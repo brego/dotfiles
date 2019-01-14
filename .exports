@@ -1,3 +1,5 @@
+export PATH="/usr/local/sbin:$PATH"
+
 # Make vim the default editor
 export EDITOR="vim"
 
@@ -19,9 +21,10 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # github.com/trapd00r/LS_COLORS
 system_type=$(uname -s)
 if [ "$system_type" = "Darwin" ]; then
-	command -v gdircolors >/dev/null 2>&1 || alias gdircolors="dircolors"
-	eval "$(gdircolors -b ${HOME}/.dircolors)"
+    command -v gdircolors >/dev/null 2>&1 || alias gdircolors="dircolors"
+    eval "$(gdircolors -b ${HOME}/.dircolors)"
 else
-	eval "$(dircolors -b ${HOME}/.dircolors)"
+    eval "$(dircolors -b ${HOME}/.dircolors)"
 fi;
 
+eval "$(gulp --completion=bash)";

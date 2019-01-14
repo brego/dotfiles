@@ -138,3 +138,5 @@ if [ "$TERM" != dumb ] && [ -n "$GRC" ]
         alias "$app"='colourify '$app
     done
 fi
+
+alias cleandnscache="sudo killall -HUP mDNSResponder"
