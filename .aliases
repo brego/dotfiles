@@ -155,3 +155,5 @@ alias glo="git pull origin" # + branch name
 alias gb="git branch" # + branch name
 alias gc="git checkout" # + branch name
 alias gcb="git checkout -b" # + branch name
+
+alias gm="git merge" # + branch name

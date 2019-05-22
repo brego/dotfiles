@@ -33,7 +33,7 @@
 # It copies branch-1 contents to branch-2 without merging, whilie keeping the
 # branch-2 history.
     merge-theirs = !git merge --no-edit -s ours "$1" && git branch branchTEMP && git reset --hard "$1" && git reset --soft branchTEMP && git commit --amend && git branch -D branchTEMP && git diff HEAD "$1"
-    branch-cleanup = "!git branch --no-color --merged | grep -v '\\*' | grep -v 'master|production|staging|release' | xargs -n 1 git branch -d"
+    branch-cleanup = "!git branch --no-color --merged | grep -v '\\*' | grep -vE 'master|production|staging|release' | xargs -n 1 git branch -d"
     branch-refresh = "remote update origin --prune"
 	update-branches = "!git co release; git up; git co master; git up; git m release; git push; git b --no-color --no-merged | while read a; do git co $a; git up; git m master; git push; done;"
 [commit]
