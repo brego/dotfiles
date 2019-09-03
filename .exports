@@ -1,4 +1,8 @@
 export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+export PATH="/usr/local/opt/gettext/bin:$PATH"
 
 # Make vim the default editor
 export EDITOR="vim"
@@ -27,4 +31,4 @@ else
     eval "$(dircolors -b ${HOME}/.dircolors)"
 fi;
 
-eval "$(gulp --completion=bash)";
+# eval "$(gulp --completion=bash)";

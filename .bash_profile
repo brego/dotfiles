@@ -29,3 +29,6 @@ source "$HOME/.git-completion.sh"
 # if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
 #   . $(brew --prefix)/share/bash-completion/bash_completion
 # fi
+
+# bash-completion2
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
