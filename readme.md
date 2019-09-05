@@ -1,15 +1,11 @@
-# Brego's dotfiles - a fork of Paul's dotfiles
+# Brego's dotfiles - a fork of [Paul Irish][1]'s dotfiles
 
 ## Disclaimer
 
-These are highly personal. Do not blindly use without understanding.
+These are highly personal. Do not blindly use without understanding. Please
+consider forking this repository.
 
 ## Installation
-
-### Before installing
-
-Please consider forking this repository. My changes to these scripts are not
-always user-friendly.
 
 ### Using Git and the bootstrap script
 
@@ -28,16 +24,16 @@ curl -#L https://github.com/brego/dotfiles/tarball/master | tar -xzv --strip-com
 ./bootstrap.sh
 ```
 
-To update later on, just run `./bootstrap.sh` command again (this will run `git
-pull`.)
+To update later on, just run `./bootstrap.sh` command again.
 
 ### Sensible OS X defaults
 
-When setting up a new Mac, you may want to set some sensible OS X defaults:
+When setting up a new Mac, set sensible OS X defaults:
 
 ```bash
 ./setup/brew.sh
-./setup/brew-cask.sh
 ./setup/osx.sh
 ./setup/set-computer-name.sh
 ```
+
+[1]: https://github.com/paulirish/dotfiles

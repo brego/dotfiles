@@ -2,7 +2,7 @@
 # https://github.com/paulirish/dotfiles/blob/master/.bash_prompt
 
 default_username='brego'
-default_hostname='Percival'
+default_hostname='Shani'
 
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
     export TERM=gnome-256color

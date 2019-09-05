@@ -1,15 +1,28 @@
-# Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases and ~/.functions
-# ~/.extra can be used for settings you don’t want to commit
-for file in $HOME/.{local_profile,bash_prompt,exports,aliases,functions}; do
+##
+## Load dotfiles
+##
+# ~/.local_profile can be used for settings you don’t want to commit
+for file in $HOME/.{local_profile,bash_prompt,exports,aliases,functions,history}; do
   [ -r "$file" ] && source "$file"
 done
 unset file;
 
+##
+## better `cd`'ing
+##
+
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
 
-# Autocorrect typos in path names when using `cd`
+# Correct spelling errors in arguments supplied to cd
 shopt -s cdspell;
+
+# Autocorrect on directory names to match a glob.
+shopt -s dirspell 2> /dev/null
+
+# Turn on recursive globbing (enables ** to recurse all directories)
+shopt -s globstar 2> /dev/null
+
 
 # Prefer US English and use UTF-8
 export LC_ALL="en_US.UTF-8"
@@ -25,10 +38,9 @@ complete -W "NSGlobalDomain" defaults
 # GIT completion (included in this package)
 source "$HOME/.git-completion.sh"
 
-# Brew completion
-# if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
-#   . $(brew --prefix)/share/bash-completion/bash_completion
-# fi
+# docker-compose completion (included in this package)
+source "$HOME/.docker-compose-completion.sh"
+
 
 # bash-completion2
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"

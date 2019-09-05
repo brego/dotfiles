@@ -15,3 +15,8 @@ Thumbs.db
 
 # Node
 node_modules
+
+# vim
+.vim/viminfo
+.vim/swaps/*
+.vim/undo

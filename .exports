@@ -1,4 +1,5 @@
 export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
@@ -9,15 +10,6 @@ export EDITOR="vim"
 
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
-
-# timestamps for later analysis. www.debian-administration.org/users/rossen/weblog/1
-export HISTTIMEFORMAT='%F %T '
-
-# Larger bash history (allow 32³ entries; default is 500)
-export HISTCONTROL=ignoredups:erasedups         # no duplicate entries
-export HISTSIZE=32768
-export HISTFILESIZE=$HISTSIZE
-which shopt > /dev/null && shopt -s histappend  # append to history, don't overwrite it
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 

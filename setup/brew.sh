@@ -61,6 +61,7 @@ brew install zopfli
 brew install ffmpeg
 brew install terminal-notifier
 brew install jq
+brew install bat # better cat
 
 # LOL
 brew install nyancat
