@@ -52,6 +52,7 @@ sudo chown root $mtrlocation/sbin/mtr
 # Install other useful binaries
 brew install ack
 brew install git
+brew install git-recent
 brew install imagemagick
 brew install node # This installs `npm` too using the recommended installation method
 brew install pv
