@@ -49,10 +49,13 @@ mtrlocation=$(brew info mtr | grep Cellar | sed -e 's/ (.*//') #  e.g. `/Users/p
 sudo chmod 4755 $mtrlocation/sbin/mtr
 sudo chown root $mtrlocation/sbin/mtr
 
-# Install other useful binaries
-brew install ack
+# git tools
 brew install git
 brew install git-recent
+brew install git-lfs
+
+# Install other useful binaries
+brew install ack
 brew install imagemagick
 brew install node # This installs `npm` too using the recommended installation method
 brew install pv
@@ -63,6 +66,7 @@ brew install ffmpeg
 brew install terminal-notifier
 brew install jq
 brew install bat # better cat
+brew install rsync
 
 # LOL
 brew install nyancat
