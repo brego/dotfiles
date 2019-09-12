@@ -1,0 +1,7 @@
+.bootstrap-exclude
+.DS_Store
+.git
+archive/
+setup/
+bootstrap.sh
+readme.md

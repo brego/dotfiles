@@ -2,13 +2,7 @@
 cd "$(dirname "$0")"
 
 function syncFiles() {
-    rsync --exclude ".git" \
-    --exclude ".DS_Store" \
-    --exclude "bootstrap.sh" \
-    --exclude "setup" \
-    --exclude "archive" \
-    --exclude "readme.md" \
-    -av . ~
+    rsync --exclude-from ./.bootstrap-exclude -av . ~
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
@@ -22,4 +16,5 @@ else
 fi
 
 unset syncFiles
+
 source ~/.bash_profile
