@@ -104,4 +104,3 @@ function dockerTop() {
     docker stats --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.NetIO}}\t{{.BlockIO}}\t{{.MemPerc}}\t{{.PIDs}}"
 }
 alias docker-top=dockerTop;
-unset dockerTop;
