@@ -44,3 +44,6 @@ source "$HOME/.docker-compose-completion.sh"
 
 # bash-completion2
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
+
+export BASH_SILENCE_DEPRECATION_WARNING=1
