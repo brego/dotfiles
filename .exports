@@ -1,3 +1,4 @@
+#!/bin/bash
 # PATH changes
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
@@ -29,4 +30,4 @@ else
     eval "$(dircolors -b ${HOME}/.dircolors)"
 fi;
 
-# eval "$(gulp --completion=bash)";
+export BASH_SILENCE_DEPRECATION_WARNING=1

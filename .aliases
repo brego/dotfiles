@@ -1,3 +1,4 @@
+#!/bin/bash
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."
 alias cd..="cd .."
@@ -82,9 +83,6 @@ alias dockseparatoradd="defaults write com.apple.dock persistent-apps -array-add
 
 alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
 
-# bregopass
-alias bregopass="${HOME}/.bregopass.sh"
-
 alias git-clean-local='git branch --no-color --merged | grep -v "\*" | grep -v "master|production|staging" | xargs -n 1 git branch -d';
 
 # Restart the Bluetooth service
@@ -101,7 +99,3 @@ if [ "$TERM" != dumb ] && [ -n "$GRC" ]
 fi
 
 alias cleandnscache="sudo killall -HUP mDNSResponder"
-
-# Git, from Ire Aderinokun https://github.com/ireade/dotfiles/
-alias gs="git s"
-alias gac="git add . && git commit -m" # + commit message
