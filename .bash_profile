@@ -40,7 +40,3 @@ source "$HOME/.git-completion.sh"
 
 # docker-compose completion (included in this package)
 source "$HOME/.docker-compose-completion.sh"
-
-
-# bash-completion2
-# [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
