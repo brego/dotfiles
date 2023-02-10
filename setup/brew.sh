@@ -65,9 +65,15 @@ brew install terminal-notifier
 brew install jq
 brew install bat # better cat
 brew install rsync
+brew install thefuck
+brew install --cask rectangle # replaces Spectacle.app, <https://rectangleapp.com>
 
 # LOL
 brew install nyancat
+
+# JetBrains Mono font
+brew tap homebrew/cask-fonts
+brew install --cask font-jetbrains-mono
 
 # Remove outdated versions from the cellar
 brew cleanup
