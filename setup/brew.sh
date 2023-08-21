@@ -67,6 +67,10 @@ brew install bat # better cat
 brew install rsync
 brew install thefuck
 brew install --cask rectangle # replaces Spectacle.app, <https://rectangleapp.com>
+brew install pandoc
+
+# https://www.kodiakskorner.com/log/258
+brew install sleepwatcher
 
 # LOL
 brew install nyancat
