@@ -51,6 +51,7 @@ sudo chown root $mtrlocation/sbin/mtr
 brew install git
 brew install git-recent
 brew install git-lfs
+brew install git-delta
 
 # Install other useful binaries
 brew install ack

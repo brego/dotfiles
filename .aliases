@@ -6,11 +6,50 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+GRC=`which grc`
+alias colourify=""
+if [ "$TERM" != dumb ] && [ -n "$GRC" ]; then
+    alias colourify="$GRC -es --colour=auto"
+    alias configure='colourify ./configure'
+
+    alias blkid='colourify blkid'
+    alias diff='colourify diff'
+    alias docker='colourify docker'
+    alias docker-machine='colourify docker-machine'
+    alias env='colourify env'
+    alias free='colourify free'
+    alias fdisk='colourify fdisk'
+    alias findmnt='colourify findmnt'
+    alias make='colourify make'
+    alias gcc='colourify gcc'
+    alias g++='colourify g++'
+    alias id='colourify id'
+    alias ip='colourify ip'
+    alias iptables='colourify iptables'
+    alias as='colourify as'
+    alias gas='colourify gas'
+    alias ld='colourify ld'
+    alias lsof='colourify lsof'
+    alias lsblk='colourify lsblk'
+    alias lspci='colourify lspci'
+    alias netstat='colourify netstat'
+    alias ping='colourify ping'
+    alias traceroute='colourify traceroute'
+    alias traceroute6='colourify traceroute6'
+    alias head='colourify head'
+    alias tail='colourify tail'
+    alias dig='colourify dig'
+    alias mount='colourify mount'
+    alias mtr='colourify mtr'
+    alias semanage='colourify semanage'
+    alias getsebool='colourify getsebool'
+    alias ifconfig='colourify ifconfig'
+fi
+
+
 alias rm="rm -i"  # safety first
 alias su='su -'
 alias hosts='sudo $EDITOR /etc/hosts'
-
-
 
 ###
 # time to upgrade `ls`
@@ -46,9 +85,6 @@ alias d="cd ${HOME}/Desktop"
 alias p="cd ${HOME}/Projects"
 alias w="cd ${HOME}/Work"
 
-# File size
-alias fs="stat -f \"%z bytes\""
-
 # ROT13-encode text. Works for decoding, too! ;)
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
 
@@ -65,14 +101,14 @@ alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 10'"
 
 # Free space on disks
-alias df="df -h"
+alias df="colourify df -h"
 
 # Usable ps output
-alias ps="ps -A -f"
+alias ps="colourify ps -A -f"
 
 # List size of files
-alias du="du -h"
-alias ds="du -sh"
+alias du="colourify du -h"
+alias ds="colourify du -sh"
 
 # Work with screen
 alias screenopen="screen -x"
@@ -81,22 +117,10 @@ alias screencreate="screen -S"
 # Dock separator
 alias dockseparatoradd="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}' && killall Dock"
 
-alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
-
 alias git-clean-local='git branch --no-color --merged | grep -v "\*" | grep -v "master|production|staging" | xargs -n 1 git branch -d';
 
 # Restart the Bluetooth service
 alias restartbluetooth='sudo kextunload -b com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport; kextload -b com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport'
-
-GRC=`which grc`
-if [ "$TERM" != dumb ] && [ -n "$GRC" ]
-    then
-    alias colourify="$GRC -es --colour=auto"
-    alias configure='colourify ./configure'
-    for app in {diff,make,gcc,g++,ping,traceroute,as,gas,ld}; do
-        alias "$app"='colourify '$app
-    done
-fi
 
 alias cleandnscache="sudo killall -HUP mDNSResponder"
 

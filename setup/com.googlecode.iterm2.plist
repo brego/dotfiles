@@ -415,12 +415,16 @@
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.14145714044570923</real>
+				<real>0.18431386351585388</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.10840655118227005</real>
+				<real>0.19605964422225952</real>
 				<key>Red Component</key>
-				<real>0.81926977634429932</real>
+				<real>0.9053192138671875</real>
 			</dict>
 			<key>Ansi 10 Color</key>
 			<dict>
@@ -541,12 +545,16 @@
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.23225757479667664</real>
+				<real>0.0</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.084504462778568268</real>
+				<real>0.0</real>
 				<key>Red Component</key>
-				<real>0.95941102504730225</real>
+				<real>1</real>
 			</dict>
 			<key>Automatically Log</key>
 			<false/>
@@ -557,13 +565,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.159881591796875</real>
+				<real>0.12941176470588237</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.10619088815377292</real>
+				<real>0.11372549019607843</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>0.10196078431372549</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -581,7 +589,7 @@
 				<real>1</real>
 			</dict>
 			<key>Blend</key>
-			<real>0.094756622497852078</real>
+			<real>0.050000000000000003</real>
 			<key>Blink Allowed</key>
 			<false/>
 			<key>Blinking Cursor</key>
@@ -589,7 +597,7 @@
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>7.6172753480764532</real>
+			<real>15.02568625233177</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -601,6 +609,8 @@
 			</dict>
 			<key>Bound Hosts</key>
 			<array/>
+			<key>Brighten Bold Text</key>
+			<false/>
 			<key>Character Encoding</key>
 			<integer>4</integer>
 			<key>Close Sessions On End</key>
@@ -672,7 +682,7 @@
 			<key>Hide After Opening</key>
 			<false/>
 			<key>Horizontal Spacing</key>
-			<integer>1</integer>
+			<real>1</real>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
@@ -999,7 +1009,7 @@
 			<key>Minimum Contrast</key>
 			<integer>0</integer>
 			<key>Mouse Reporting</key>
-			<true/>
+			<false/>
 			<key>Name</key>
 			<string>Brego v1.1</string>
 			<key>Non Ascii Font</key>
@@ -1011,7 +1021,7 @@
 			<key>Normal Font</key>
 			<string>JetBrainsMonoRoman-Medium 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
-			<false/>
+			<true/>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1165,7 +1175,7 @@
 			<key>Thin Strokes</key>
 			<integer>3</integer>
 			<key>Transparency</key>
-			<integer>0</integer>
+			<real>0.0</real>
 			<key>Triggers</key>
 			<array>
 				<dict>
@@ -1200,7 +1210,7 @@
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Vertical Spacing</key>
-			<integer>1</integer>
+			<real>1.1499999999999999</real>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
@@ -4961,7 +4971,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>kCPKSelectionViewPreferredModeKey</key>
-	<integer>6</integer>
+	<integer>7</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
 	<false/>
 </dict>

@@ -197,6 +197,9 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 sudo systemsetup -settimezone "Europe/Copenhagen" > /dev/null
 
+# Sonoma capslock crap
+sudo defaults write /Library/Preferences/FeatureFlags/Domain/UIKit.plist redesigned_text_cursor -dict-add Enabled -bool NO
+
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
