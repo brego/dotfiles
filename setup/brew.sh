@@ -80,5 +80,8 @@ brew install nyancat
 brew tap homebrew/cask-fonts
 brew install --cask font-jetbrains-mono
 
+brew install pearcleaner
+brew install jordanbaird-ice
+
 # Remove outdated versions from the cellar
 brew cleanup
