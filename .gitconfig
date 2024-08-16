@@ -47,8 +47,11 @@
     unstage         = reset HEAD
     undo-commit     = reset --soft HEAD^
     undo-push       = push -f origin HEAD^:master
-    branch-cleanup  = "!git branch --no-color --merged | grep -v '\\*' | grep -vE 'master|production|staging|release' | xargs -n 1 git branch -d"
+    branch-cleanup  = "!git branch --no-color | grep -v '\\*' | grep -vE 'master|production|staging|release' | xargs -n 1 git branch -D"
     branch-refresh  = "remote update origin --prune"
+
+    peek = !git stash && git checkout
+    back = !git checkout - && git stash pop
 
 # Alias below is built by Kim Rose based on the following:
 # http://stackoverflow.com/a/4969679/954798
