@@ -29,6 +29,7 @@
     aa              = add .
     ap              = add -p
     b               = branch
+    bc              = branch-cleanup
     c               = commit
     cm              = commit -m
     co              = checkout
@@ -36,7 +37,8 @@
     d               = diff --color --color-words --abbrev
     ds              = diff --color --color-words --abbrev --staged
     f               = fetch
-    h               = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    # h               = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    h               = log --color --graph --pretty=format:'%Cred%h%Creset %Cgreen[%ad]%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' --abbrev-commit --date=short
     l               = log --name-status
     log             = log --topo-order
     m               = merge
@@ -52,6 +54,8 @@
 
     peek = !git stash && git checkout
     back = !git checkout - && git stash pop
+
+    stashall = !git add . && git stash
 
 # Alias below is built by Kim Rose based on the following:
 # http://stackoverflow.com/a/4969679/954798

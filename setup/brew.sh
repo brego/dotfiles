@@ -77,8 +77,10 @@ brew install sleepwatcher
 brew install nyancat
 
 # JetBrains Mono font
-brew tap homebrew/cask-fonts
-brew install --cask font-jetbrains-mono
+brew install font-jetbrains-mono
+
+# Fira Code font
+brew install font-fira-code
 
 brew install pearcleaner
 brew install jordanbaird-ice
